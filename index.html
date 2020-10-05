@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>OTTO</title>
+        <style>
+            * {
+                font-family: Avenir,serif;
+                margin: 0;
+            }
+
+            body {
+                background-color: rgb(246, 246, 246);
+            }
+
+
+
+            #navigation {
+                height: 60px;
+                width: 100%;
+                position: fixed;
+                background-color: #FFFFFF;
+                z-index: 10;
+                border-bottom: 1px solid #c4c4c4;
+            }
+
+            #navigation h1 {
+                margin-top: 10px;
+                margin-left: 10px;
+
+            }
+
+            #space {
+                height: 60px;
+            }
+
+            #canvas {
+                background-color: white;
+                border: 1px solid #c4c4c4;
+            }
+
+            #sideBox {
+                width: 300px;
+                height: 830px;
+                border: 1px solid #c4c4c4;
+                position: absolute;
+                top: 80px;
+                left: 900px;
+                padding-left: 30px;
+                padding-top: 30px;
+                background-color: white;
+            }
+
+            .SHOP {
+                border: 5px solid rgba(240, 128, 128, 0);
+                border-radius: 50%;
+                border-color: rgba(240, 128, 128, 0);
+            }
+
+            .DL {
+                border: 5px solid rgba(240, 128, 128, 0);
+                border-radius: 50%;
+
+                border-color: rgba(240, 128, 128, 0);
+            }
+
+
+            #OTTO {
+                z-index: 150;
+            }
+
+        </style>
+    </head>
+    <body>
+    <script src="printer.js"></script>
+    <script src="storage.js"></script>
+
+    <div id="navigation">
+        <h1>Dienstleister Visualisierung</h1>
+    </div>
+
+    <div id="space"></div>
+    <img alt="test" src="images/Otto.png" id="OTTO">
+        <canvas id="canvas" style="position:absolute; top: 80px; left: 20px" onmousedown="reset()"></canvas>
+        <div id="sideBox">
+            <h2 id="heading">Dienstleister</h2>
+
+        </div>
+
+        <img alt="test" src="images/1und1.png" id="1und1" class="SHOP" onmousedown="press('1und1', 'SHOP')">
+        <img alt="test" src="images/commercetools.png" id="Commercetools" class="SHOP" onmousedown="press('Commercetools', 'SHOP')">
+        <img alt="test" src="images/cosmoshop.png" id="Cosmoshop" class="SHOP" onmousedown="press('Cosmoshop', 'SHOP')">
+        <img alt="test" src="images/epages.png" id="Epages" class="SHOP" onmousedown="press('Epages', 'SHOP')">
+        <img alt="test" src="images/gambio.png" id="Gambio" class="SHOP" onmousedown="press('Gambio', 'SHOP')">
+        <img alt="test" src="images/intershop.png" id="Intershop" class="SHOP" onmousedown="press('Intershop', 'SHOP')">
+        <img alt="test" src="images/ligthspeed.png" id="Lightspeed" class="SHOP" onmousedown="press('Lightspeed', 'SHOP')">
+        <img alt="test" src="images/Magento.png" id="Magento" class="SHOP" onmousedown="press('Magento', 'SHOP')">
+        <img alt="test" src="images/modified.png" id="Modified" class="SHOP" onmousedown="press('Modified', 'SHOP')">
+        <img alt="test" src="images/oscommerce.png" id="OScommerce" class="SHOP" onmousedown="press('OScommerce', 'SHOP')">
+        <img alt="test" src="images/oxid.png" id="Oxid" class="SHOP" onmousedown="press('Oxid', 'SHOP')">
+        <img alt="test" src="images/Prestashop.png" id="Presta" class="SHOP" onmousedown="press('Presta', 'SHOP')">
+        <img alt="test" src="images/Shopify.png" id="Shopify" class="SHOP" onmousedown="press('Shopify', 'SHOP')">
+        <img alt="test" src="images/Shopware.png" id="Shopware" class="SHOP" onmousedown="press('Shopware', 'SHOP')">
+        <img alt="test" src="images/Woocommerce.png" id="Woocommerce" class="SHOP" onmousedown="press('Woocommerce', 'SHOP')">
+        <img alt="test" src="images/xtCommerce.png" id="xtCommerce" class="SHOP" onmousedown="press('xtCommerce', 'SHOP')">
+
+        <img alt="test" src="images/004.png" class="DL" id="004" onmousedown="press('004', 'DL')">
+        <img alt="test" src="images/brickfox.png" class="DL" id="Brickfox" onmousedown="press('Brickfox', 'DL')">
+        <img alt="test" src="images/channable.png" class="DL" id="Channable" onmousedown="press('Channable', 'DL')">
+        <img alt="test" src="images/channeladvisor.png" class="DL" id="channeladvisor" onmousedown="press('channeladvisor', 'DL')">
+        <img alt="test" src="images/JTL.png" class="DL" id="JTL" onmousedown="press('JTL', 'DL')">
+        <img alt="test" src="images/Lengow.png" class="DL" id="Lengow" onmousedown="press('Lengow', 'DL')">
+        <img alt="test" src="images/microtech.png" class="DL" id="Microtech" onmousedown="press('Microtech', 'DL')">
+        <img alt="test" src="images/novomind.png" class="DL" id="novomind" onmousedown="press('novomind', 'DL')">
+        <img alt="test" src="images/plentymarkets.png" class="DL" id="Plentymarkets" onmousedown="press('Plentymarkets', 'DL')">
+        <img alt="test" src="images/Tradebyte.png" class="DL" id="Tradebyte" onmousedown="press('Tradebyte', 'DL')">
+        <img alt="test" src="images/vario.png" class="DL" id="Vario" onmousedown="press('Vario', 'DL')">
+        <img alt="test" src="images/globalsys.png" class="DL" id="Globalsys" onmousedown="press('Globalsys', 'DL')">
+        <img alt="test" src="images/magnalister.png" id="Magnalister" class="DL" onmousedown="press('Magnalister', 'DL')">
+
+
+
+
+
+    </body>
+
+</html>
