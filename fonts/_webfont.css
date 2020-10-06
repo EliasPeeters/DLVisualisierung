@@ -1,0 +1,165 @@
+
+
+/*
+This uses Bram Stein's modern webfont syntax
+from The Webfont Handbook (https://abookapart.com/products/webfont-handbook)
+It covers all modern browsers, as well as slightly older ones still in active use
+Here is a list of the minimum version for .woff support
+    BROWSER             MIN VERSION FOR WOFF    MIN VERSION DATE
+    IE                  version 9 and up        2011 March
+    Edge                version 12 and up       2015 July
+    Firefox             version 3.6 and up      2010 January
+    Chrome              version 5 and up        2010 May
+    Safari              version 5.1 and up      2011 July
+    Opera               version 11.5 and up     2011 June
+    iOS Safari          version 5.1 and up      2012 March
+    Android             version 4.4 and up      2013 December
+    Blackberry          version 7 and up        2011 December
+    Opera Mobile        version 12 and up       2012 February
+    Chrome Android      version 64 and up       2018 January
+    Firefox Android     version 57 and up       2017 November
+    IE Mobile           version 10 and up       2012 November
+    UC for Android      version 11.8 and up     2016 August
+    Samsung Internet    version 4 and up        2016 April
+    QQ                  version 1.2 and up      2016 December
+    Baidu               version 7.12 and up     2017 March
+*/
+
+
+
+/* OTTO Sans Regular, Italic, Bold, Bold Italic -- Style linked */
+@font-face {
+    font-family: 'OTTO Sans';
+    src: url('OTTOSans-Regular-2v1-ottosubset.woff2') format('woff2'),
+         url('OTTOSans-Regular-2v1-ottosubset.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+@font-face {
+    font-family: 'OTTO Sans';
+    src: url('OTTOSans-Italic-2v1-ottosubset.woff2') format('woff2'),
+         url('OTTOSans-Italic-2v1-ottosubset.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    }
+@font-face {
+    font-family: 'OTTO Sans';
+    src: url('OTTOSans-Bold-2v1-ottosubset.woff2') format('woff2'),
+         url('OTTOSans-Bold-2v1-ottosubset.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    }
+@font-face {
+    font-family: 'OTTO Sans';
+    src: url('OTTOSans-BoldItalic-2v1-ottosubset.woff2') format('woff2'),
+         url('OTTOSans-BoldItalic-2v1-ottosubset.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    }
+    
+.ottosans { font-family: 'OTTO Sans'; }
+
+
+
+/* OTTO Sans Thin and Thin Italic -- style linked */
+@font-face {
+    font-family: 'OTTO Sans Thin';
+    src: url('OTTOSans-Thin-2v1-ottosubset.woff2') format('woff2'),
+         url('OTTOSans-Thin-2v1-ottosubset.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+@font-face {
+    font-family: 'OTTO Sans Thin';
+    src: url('OTTOSans-ThinItalic-2v1-ottosubset.woff2') format('woff2'),
+         url('OTTOSans-ThinItalic-2v1-ottosubset.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    }
+.ottosansthin { font-family: 'OTTO Sans Thin'; }
+
+
+
+/* OTTO Sans KO Black and KO Black Italic -- style linked */
+@font-face {
+    font-family: 'OTTO Sans KO Black';
+    src: url('OTTOSansKO-Black-2v1-ottosubset.woff2') format('woff2'),
+         url('OTTOSansKO-Black-2v1-ottosubset.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+@font-face {
+    font-family: 'OTTO Sans KO Black';
+    src: url('OTTOSansKO-BlackItalic-2v1-ottosubset.woff2') format('woff2'),
+         url('OTTOSansKO-BlackItalic-2v1-ottosubset.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    }
+.ottosanskoblack { font-family: 'OTTO Sans KO Black'; }
+
+
+
+/* OTTO Sans Condensed Regular and Bold -- Style linked */
+@font-face {
+    font-family: 'OTTO Sans Condensed';
+    src: url('OTTOCondensed-Regular-2v1-ottosubset.woff2') format('woff2'),
+         url('OTTOCondensed-Regular-2v1-ottosubset.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+@font-face {
+    font-family: 'OTTO Sans Condensed';
+    src: url('OTTOCondensed-Bold-2v1-ottosubset.woff2') format('woff2'),
+         url('OTTOCondensed-Bold-2v1-ottosubset.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    }
+.ottosanscond { font-family: 'OTTO Sans Condensed'; }
+
+
+
+/* individual styles -- no style linking */
+@font-face {
+    font-family: 'OTTO Sans Light';
+    src: url('OTTOSans-Light-2v1-ottosubset.woff2') format('woff2'),
+         url('OTTOSans-Light-2v1-ottosubset.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+.ottosanslight { font-family: 'OTTO Sans Light'; }
+
+@font-face {
+    font-family: 'OTTO Sans KO Medium';
+    src: url('OTTOSansKO-Medium-2v1-ottosubset.woff2') format('woff2'),
+         url('OTTOSansKO-Medium-2v1-ottosubset.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+.ottosanskomedium { font-family: 'OTTO Sans KO Medium'; }
+
+@font-face {
+    font-family: 'OTTO Sans Condensed Thin';
+    src: url('OTTOCondensed-Thin-2v1-ottosubset.woff2') format('woff2'),
+         url('OTTOCondensed-Thin-2v1-ottosubset.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+.ottosanscondthin { font-family: 'OTTO Sans Condensed Thin'; }
+
+@font-face {
+    font-family: 'OTTO Sans Condensed KO Medium';
+    src: url('OTTOSansCondKO-Medium-2v1-ottosubset.woff2') format('woff2'),
+         url('OTTOSansCondKO-Medium-2v1-ottosubset.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+.ottosanscondkomedium { font-family: 'OTTO Sans Condensed KO Medium'; }
+
+@font-face {
+    font-family: 'OTTO Sans Condensed KO Black';
+    src: url('OTTOSansCondKO-Black-2v1-ottosubset.woff2') format('woff2'),
+         url('OTTOSansCondKO-Black-2v1-ottosubset.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+.ottosanscondkoblack { font-family: 'OTTO Sans Condensed KO Black'; }

@@ -16,6 +16,10 @@ var canvasLeft = 20;
 var ottoLogoSize = 100;
 var shadowRadius = 5;
 
+var moveX = 0;
+var moveY = 0;
+
+
 
 function calculateSize() {
 
@@ -29,6 +33,7 @@ function calculateSize() {
     ctx.canvas.width = size;
 
 
+
     centerX = size / 2;
     centerY = size / 2;
 
@@ -39,15 +44,41 @@ function calculateSize() {
     shopsRadius = size / 23;
 
     ottoLogoSize = size / 5;
+
+    canvasTop = parseInt(canvas.style.top.substring(0, canvas.style.top.length - 2));
+    canvasLeft = parseInt(canvas.style.left.substring(0, canvas.style.left.length - 2));
+
+    canvasTop += moveY;
+    canvasLeft += moveX;
+    sideBarSize(size);
+    settingsBox(size);
 }
 
 function setImages() {
     let shops = document.getElementsByClassName('SHOP');
     let dl = document.getElementsByClassName('DL');
 
-    let angleForEachShop = 360/shops.length;
-    let angleForEachDL = 360/dl.length;
+    let dl2 = [];
+    dl2.push(storage[0]);
+    for (var i = 1; i < storage.length; i++) {
+            if (buttonState === 0) {
+                if (storage[i][1] === 1) {
+                    dl2.push(storage[i]);
+                } else {
+                    document.getElementById(storage[i][0]).style.visibility = 'hidden';
+                    document.getElementById(storage[i][0]).style.opacity = '0';
+                }
+            } else {
+                dl2.push(storage[i]);
+                document.getElementById(storage[i][0]).style.visibility = 'visible';
+                document.getElementById(storage[i][0]).style.opacity = '1';
+            }
+    }
 
+    console.log(dl2);
+
+    let angleForEachShop = 360/shops.length;
+    let angleForEachDL = 360/(dl2.length-1);
 
     for (var i = 0; i < shops.length; i++) {
 
@@ -64,6 +95,23 @@ function setImages() {
         shopsListCords.push([id, x, y]);
     }
 
+    for (var i = 1; i < dl2.length; i++) {
+        let x = centerX + outerCircleRadius * Math.sin(angleForEachDL*i* ( Math.PI / 180 ));
+        let y = centerY + outerCircleRadius * Math.cos(angleForEachDL*i* ( Math.PI / 180 ));
+        var element = document.getElementById(dl2[i][0]);
+        let id = element.id;
+        element.style.position = 'absolute';
+        element.style.left = x-dlRadius+canvasLeft-shadowRadius + "px";
+        element.style.top = y-dlRadius+canvasTop-shadowRadius + "px";
+        element.height = dlRadius*2;
+        element.width = dlRadius*2;
+        //element.style.borderColor = 'rgba(240, 128, 128, 1)';
+        dlListCords.push([id, x, y])
+
+    }
+
+    /*
+
     for (var i = 0; i < dl.length; i++) {
 
         let x = centerX + outerCircleRadius * Math.sin(angleForEachDL*i* ( Math.PI / 180 ));
@@ -76,29 +124,46 @@ function setImages() {
         dl[i].width = dlRadius*2;
         dlListCords.push([id, x, y])
     }
+    */
+
+    var ottoLogo = document.getElementById('OTTO');
+    ottoLogo.width = ottoLogoSize;
+    ottoLogo.style.left = centerX-ottoLogoSize/3 + 'px';
+    ottoLogo.style.top = centerY+((ottoLogoSize/2.5)/2) + 'px';
+
+
+
+}
+
+function sideBarSize(canvasSize) {
+    document.getElementById('sideBox').style.left = canvasSize + 40 + 'px'
+    document.getElementById('sideBox').style.height = canvasSize -30-250 + 'px';
+}
+
+function settingsBox(canvasSize) {
+    document.getElementById('controller').style.left = canvasSize + 40 + 'px';
 }
 
 window.onresize = function () {
+    reDrawEverything();
+};
+
+function reDrawEverything() {
     calculateSize();
     drawBackground();
     setImages();
-};
+}
 
 window.onload = function () {
     var c = document.getElementById("canvas");
     var ctx = c.getContext("2d");
+
     calculateSize();
     drawBackground();
-
-
-    canvasTop = parseInt(c.style.top.substring(0, c.style.top.length - 2));
-    canvasLeft = parseInt(c.style.left.substring(0, c.style.left.length - 2));
 
     setImages();
 
 
-    var ottoLogo = document.getElementById('OTTO');
-    ottoLogo.style.width = ottoLogoSize;
 
 /*
     for (var i = 0; i < images.length; i++) {
@@ -143,8 +208,8 @@ function press(input, type) {
                     if (storage[0][i] === shopsListCords[ii][0]) {
 
                         ctx.beginPath();
-                        ctx.moveTo((leftInt-canvasLeft+heightInt/2), (topInt-canvasTop+heightInt/2));
-                        ctx.lineTo(shopsListCords[ii][1], shopsListCords[ii][2]);
+                        ctx.moveTo((leftInt-canvasLeft+heightInt/2)+moveX, (topInt-canvasTop+heightInt/2)+moveY);
+                        ctx.lineTo(shopsListCords[ii][1]+moveX, shopsListCords[ii][2]+moveY);
                         ctx.strokeStyle = '#C8C8C8';
                         ctx.stroke();
 
@@ -168,8 +233,8 @@ function press(input, type) {
                 for (var ii = 0;  ii < dlListCords.length; ii++) {
                     if (storage[i][0] === dlListCords[ii][0]) {
                         ctx.beginPath();
-                        ctx.moveTo((leftInt-canvasLeft+heightInt/2), (topInt-canvasTop+heightInt/2));
-                        ctx.lineTo(dlListCords[ii][1], dlListCords[ii][2]);
+                        ctx.moveTo((leftInt-canvasLeft+heightInt/2)+moveX, (topInt-canvasTop+heightInt/2)+moveY);
+                        ctx.lineTo(dlListCords[ii][1]+moveX, dlListCords[ii][2]+moveY);
                         ctx.strokeStyle = '#C8C8C8';
                         ctx.stroke();
 
@@ -211,12 +276,12 @@ function drawBackground() {
     var ctx = c.getContext("2d");
 
     ctx.beginPath();
-    ctx.arc(centerX, centerY, innerCircleRadius, 0, 2 * Math.PI);
+    ctx.arc(centerX+moveX, centerY+moveY, innerCircleRadius, 0, 2 * Math.PI);
     ctx.strokeStyle = '#969696';
     ctx.stroke();
 
     ctx.beginPath();
-    ctx.arc(centerX, centerY, outerCircleRadius, 0, 2 * Math.PI);
+    ctx.arc(centerX+moveX, centerY+moveY, outerCircleRadius, 0, 2 * Math.PI);
     ctx.strokeStyle = '#969696';
     ctx.stroke();
 

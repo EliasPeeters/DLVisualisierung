@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<title>OTTO Partner Connect</title>
+
+<link rel="stylesheet" type="text/css" href="https://pattern-library.portal.otto.market/versions/latest/obc-components.css">
+<link rel="stylesheet" type="text/css" href="/navstar/public/css/navigation.css">
+
+<link rel="shortcut icon" href="https://pattern-library.portal.otto.market/static/assets/images/favicons/favicon.ico" type="image/x-icon">
+<link rel="icon" href="https://pattern-library.portal.otto.market/static/assets/images/favicons/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" href="https://pattern-library.portal.otto.market/static/assets/images/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="https://pattern-library.portal.otto.market/static/assets/images/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="https://pattern-library.portal.otto.market/static/assets/images/favicons/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="https://pattern-library.portal.otto.market/static/assets/images/favicons/favicon-160x160.png" sizes="160x160">
+<link rel="icon" type="image/png" href="https://pattern-library.portal.otto.market/static/assets/images/favicons/favicon-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="https://pattern-library.portal.otto.market/static/assets/images/favicons/favicon-196x196.png" sizes="196x196">
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<!-- Error reporter must be loaded first so that errors in scripts loaded below are caught -->
+
+<script type="text/javascript" src="/passepartout/error-reporter.c62ac990338182aa98947df5cfba77ed.js"></script>
+<link rel="stylesheet" type="text/css" href="/passepartout/portal.44218a8d3d02da1345050c43e5ddb711.css">
+<script type="text/javascript" src="/passepartout/portal.85f5223e04dfbbd287050420bb66cdf1.js"></script>
+</head>
+<body>
+<header class="portal_header">
+    <div class="portal_header-layout">
+        <a class="portal_logo" href="/" title="Return to OBC">Return to OBC</a>
+        <ul class="portal_header-nav">
+          <li>
+                
+                <div class="portal_header-nav-icon obc_icon-help help-icon portal_header_icons" data-target="nptn_help"></div>
+                <div class="portal_header-nav__dropdown" id="nptn_help">
+                    <div class="portal_header-nav__dropdown-arrow"></div>
+                    
+                    <a class="portal_header-nav__dropdown-item"
+                       href="https://preprod-otto-community-prototyp.cs107.force.com/s/helpdesk" target="_blank">Helpdesk</a>
+                    
+                    <a class="portal_header-nav__dropdown-item"
+                       href="https://preprod-otto-community-prototyp.cs107.force.com/s/ticketanlegen" target="_blank">Kontakt</a>
+                    
+                </div>
+                
+            </li>
+            
+<li>
+   <a class="obc_icon-settings portal_header-nav-icon portal_header_icons" data-target="settings"></a>
+    <div class="portal_header-nav__dropdown" id="settings">
+        <div class="portal_header-nav__dropdown-arrow"></div>
+        
+            <a class="portal_header-nav__dropdown-item" href="/settings?section=shipping-and-returns">Versand und Retouren</a>
+        
+            <a class="portal_header-nav__dropdown-item" href="/settings?section=payment-information">Zahlungsinformationen</a>
+        
+            <a class="portal_header-nav__dropdown-item" href="/settings?section=user-management">Nutzerverwaltung</a>
+        
+            <a class="portal_header-nav__dropdown-item" href="/settings?section=mock-user-management">Mock-Nutzerverwaltung</a>
+        
+    </div>
+</li>
+
+
+            <li>
+    <a class="portal_header-nav__profile portal_header_icons" id="profileInitials" data-target="profile"></a>
+    <div class="portal_header-nav__dropdown" id="profile">
+        <div class="portal_header-nav__dropdown-arrow"></div>
+        <a class="portal_header-nav__dropdown-item" href="/profile">Verkäuferprofil</a>
+        <a class="portal_header-nav__dropdown-item" href="/profile/api/logout" style="border-top:1px solid #C4C4C4;">Logout</a>
+    </div>
+</li>
+<script type="text/javascript" src="/profile/public/js/profile-include.js"></script>
+
+        </ul>
+    </div>
+</header>
+
+
+
+<esi:include src="/passepartout" ></esi:include>
+
+<div class="portal_container">
+    <nav id="portal_nav">
+    <div class="menu">
+        
+        <div class="menu--item" data-uri="/">
+            <a href="/">
+            <div class="menu--itemhead">
+                <div class="menu--icon obc_icon-module-dashboard"></div>
+                <div class="menu--title">Startseite</div>
+            </div>
+            
+            </a>
+        </div>
+        
+        <div class="menu--item" data-uri="/products">
+            <a href="/products">
+            <div class="menu--itemhead">
+                <div class="menu--icon obc_icon-module-products"></div>
+                <div class="menu--title">Produkte</div>
+            </div>
+            
+            </a>
+        </div>
+        
+        <div class="menu--item" data-uri="/papi/orders">
+            <a href="/papi/orders">
+            <div class="menu--itemhead">
+                <div class="menu--icon obc_icon-module-orders"></div>
+                <div class="menu--title">Aufträge</div>
+            </div>
+            
+            <div class="submenu">
+                
+                <a href="/papi/orders">
+                    <div class="submenu--item" data-uri="/papi/orders" >Auftragsübersicht</div>
+                </a>
+                
+                <a href="/receipts">
+                    <div class="submenu--item" data-uri="/receipts" >Kundenbelege</div>
+                </a>
+                
+            </div>
+            
+            
+        </div>
+        
+        <div class="menu--item" data-uri="/financials/payouts">
+            <a href="/financials/payouts">
+            <div class="menu--itemhead">
+                <div class="menu--icon obc_icon-module-finances"></div>
+                <div class="menu--title">Finanzen</div>
+            </div>
+            
+            <div class="submenu">
+                
+                <a href="/financials/payouts">
+                    <div class="submenu--item" data-uri="/financials/payouts" >Auszahlungen</div>
+                </a>
+                
+                <a href="/financials/downloads">
+                    <div class="submenu--item" data-uri="/financials/downloads" >Downloads</div>
+                </a>
+                
+            </div>
+            
+            
+        </div>
+        
+        <div class="menu--item" data-uri="/analytics/#uebersicht">
+            <a href="/analytics/#uebersicht">
+            <div class="menu--itemhead">
+                <div class="menu--icon obc_icon-module-analytics"></div>
+                <div class="menu--title">Analysen</div>
+            </div>
+            
+            <div class="submenu">
+                
+                <a href="/analytics/#uebersicht">
+                    <div class="submenu--item" data-uri="/analytics/#uebersicht" >Übersicht</div>
+                </a>
+                
+                <a href="/analytics/#controlling">
+                    <div class="submenu--item" data-uri="/analytics/#controlling" >Controlling</div>
+                </a>
+                
+                <a href="/analytics/#shop_performance">
+                    <div class="submenu--item" data-uri="/analytics/#shop_performance" >Shop Performance</div>
+                </a>
+                
+                <a href="/analytics/#pdq">
+                    <div class="submenu--item" data-uri="/analytics/#pdq" >Produktdatenqualität</div>
+                </a>
+                
+                <a href="/analytics/#logistik">
+                    <div class="submenu--item" data-uri="/analytics/#logistik" >Logistik</div>
+                </a>
+                
+                <a href="/analytics/adapt">
+                    <div class="submenu--item" data-uri="/analytics/adapt" >Individuelle Analysen</div>
+                </a>
+                
+            </div>
+            
+            
+        </div>
+        
+        <div class="menu--item" data-uri="/services/catalog/all">
+            <a href="/services/catalog/all">
+            <div class="menu--itemhead">
+                <div class="menu--icon obc_icon-module-services"></div>
+                <div class="menu--title">Services</div>
+            </div>
+            
+            <div class="submenu">
+                
+                <a href="/services/catalog/all">
+                    <div class="submenu--item" data-uri="/services/catalog/all" >Alle Services</div>
+                </a>
+                
+                <a href="/services/bookings">
+                    <div class="submenu--item" data-uri="/services/bookings" >Meine Buchungen</div>
+                </a>
+                
+            </div>
+            
+            
+        </div>
+        
+        <div class="menu--item" data-uri="/customer-clarifications">
+            <a href="/customer-clarifications">
+            <div class="menu--itemhead">
+                <div class="menu--icon obc_icon-module-communication"></div>
+                <div class="menu--title">Kundenanfragen</div>
+            </div>
+            
+            </a>
+        </div>
+        
+    </div>
+    <div id="portal_nav_toggle" onclick="toggleNav()">
+        <div class="navigation-toggle--button"></div>
+    </div>
+</nav>
+<script type="text/javascript" src="/navstar/public/js/navigation.js"></script>
+
+    <esi:include src="/navstar" ></esi:include>
+
+    <main class="portal_main">
+        <div slot=mainContent>
+
+            <div class="obc_title-container">
+                <h1 class="obc_heading1">Hoppla!</h1>
+            </div>
+            <div class="obc_content-container">
+                <p class="obc_copy100">
+                    Das hat leider nicht funktioniert. <br/>
+                    Bitte versuchen Sie es später noch einmal. <br/>
+                </p>
+                <p class="obc_copy100">
+                    <button type="submit" class="obc_btn-primary" onclick="location.href='/';">Zur Startseite</button>
+                </p>
+            </div>
+        </div>
+            <footer class="portal_footer">
+    <div>
+        <div class="obc_text-center obc_copy50">
+            <a class="obc_link" id="imprint"
+                href="https://www.otto.market/de/impressum.html" target="_blank">Impressum</a> |
+            <a class="obc_link" id="privacy"
+                href="https://www.otto.market/de/datenschutz.html" target="_blank">Datenschutz</a> |
+            <a class="obc_link" id="terms" href="https://www.otto.market/de/agb.html" target="_blank">AGB</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
+
+        <esi:include src="/passepartout/footer.html" ></esi:include>
+    </main>
+</div>

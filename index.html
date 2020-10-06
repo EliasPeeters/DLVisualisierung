@@ -4,14 +4,24 @@
         <meta charset="utf-8">
         <title>OTTO</title>
         <style>
+            <link href="fonts/_webfont.css" rel="stylesheet">
+            @font-face {
+                font-family: 'OTTO Sans';
+                src: url('OTTOSans-Regular-2v1-ottosubset.woff2') format('woff2'),
+                     url('OTTOSans-Regular-2v1-ottosubset.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+
             * {
-                font-family: Avenir,serif;
+                font-family: "Avenir";
                 margin: 0;
             }
 
             body {
                 background-color: rgb(246, 246, 246);
             }
+            html, body {margin: 0; height: 100%; overflow: hidden}
 
 
 
@@ -45,7 +55,6 @@
                 border: 1px solid #c4c4c4;
                 position: absolute;
                 top: 80px;
-                left: 900px;
                 padding-left: 30px;
                 padding-top: 30px;
                 background-color: white;
@@ -55,6 +64,8 @@
                 border: 5px solid rgba(240, 128, 128, 0);
                 border-radius: 50%;
                 border-color: rgba(240, 128, 128, 0);
+                transition: visibility 0s, opacity 0.5s linear;
+                transition: 500ms;
             }
 
             .DL {
@@ -62,18 +73,76 @@
                 border-radius: 50%;
 
                 border-color: rgba(240, 128, 128, 0);
+                transition: visibility 0s, opacity 0.5s linear;
+                transition: 500ms;
             }
 
 
             #OTTO {
                 z-index: 150;
+                position: absolute;
             }
 
+            #controller {
+                background-color: white;
+                width: 300px;
+                padding-top: 30px;
+                padding-left: 30px;
+                position: absolute;
+                border: 1px solid #c4c4c4;
+                height: 200px;
+                bottom: 18px;
+            }
+
+            #button {
+                background-color: #eee;
+                width: 260px;
+                height: 35px;
+                margin-top: 10px;
+                border: 1px solid #c4c4c4;
+                border-radius: 3px;
+            }
+
+            #mover {
+                height: 28px;
+                padding-top: 7px;
+                border-radius: 3px;
+                background-color: #d4021d;
+                color: white;
+                width: 130px;
+                text-align: center;
+                transition: 300ms;
+                position: relative;
+                left: 0px;
+                float: inherit;
+                top: -70px;
+            }
+
+            #button:hover {
+                cursor: pointer;
+            }
+
+            .buttonText {
+                position: relative;
+                height: 28px;
+                width: 130px;
+                text-align: center;
+                padding-top: 7px;
+                color: rgb(144, 144, 144);
+            }
+
+            #buttonText2 {
+                top: -35px;
+                left: 130px;
+
+            }
         </style>
+
     </head>
     <body>
     <script src="printer.js"></script>
     <script src="storage.js"></script>
+    <script src="button.js"></script>
 
     <div id="navigation">
         <h1>Dienstleister Visualisierung</h1>
@@ -83,8 +152,16 @@
     <img alt="test" src="images/Otto.png" id="OTTO">
         <canvas id="canvas" style="position:absolute; top: 80px; left: 20px" onmousedown="reset()"></canvas>
         <div id="sideBox">
-            <h2 id="heading">Dienstleister</h2>
+            <h2 class="ottosans" id="heading">Dienstleister</h2>
+        </div>
 
+        <div id="controller">
+            <h2>Settings</h2>
+            <div id="button" onmousedown="moveButton()">
+                <div class="buttonText">Aktuell</div>
+                <div class="buttonText" id="buttonText2">Zukunft</div>
+                <div id="mover" >Aktuell</div>
+            </div>
         </div>
 
         <img alt="test" src="images/1und1.png" id="1und1" class="SHOP" onmousedown="press('1und1', 'SHOP')">
