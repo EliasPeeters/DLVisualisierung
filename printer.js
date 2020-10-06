@@ -190,7 +190,23 @@ function press(input, type) {
     var c = document.getElementById("canvas");
     var ctx = c.getContext("2d");
 
-    document.getElementById('heading').innerHTML = input;
+    document.getElementById('sideBox').innerHTML = shopscontent;
+    if (type === 'SHOP') {
+        if (shops[input] === undefined) {
+            document.getElementById('heading').innerHTML = input;
+        } else {
+            document.getElementById('heading').innerHTML = shops[input].title;
+            document.getElementById('verysmall').innerHTML = shops[input].verysmall;
+            document.getElementById('small').innerHTML = shops[input].small;
+            document.getElementById('medium').innerHTML = shops[input].medium;
+            document.getElementById('big').innerHTML = shops[input].big;
+            document.getElementById('verybig').innerHTML = shops[input].verybig;
+        }
+    } else {
+        document.getElementById('heading').innerHTML = input;
+    }
+
+
     var counter;
     if (type === 'DL') {
 
@@ -290,4 +306,5 @@ function drawBackground() {
 function reset() {
     clear();
     drawBackground();
+    document.getElementById('sideBox').innerHTML = '';
 }

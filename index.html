@@ -158,8 +158,19 @@
                 width: 100px;
             }
 
+            .typing {
+                animation: typing 1s steps(1000, end);
+                white-space: nowrap;
+                overflow: hidden;
+            }
+
             .caption {
                 font-weight: 500;
+            }
+
+            @keyframes typing {
+                from { width: 0px }
+                to { width: 100% }
             }
         </style>
 
@@ -168,9 +179,10 @@
     <script src="printer.js"></script>
     <script src="storage.js"></script>
     <script src="button.js"></script>
+    <script src="shops.js"></script>
 
     <div id="navigation">
-        <h1>Dienstleister Visualisierung</h1>
+        <h1 id="headingPage">Dienstleister Visualisierung</h1>
     </div>
 
     <div id="space"></div>
@@ -178,40 +190,7 @@
         <canvas id="canvas" style="position:absolute; top: 80px; left: 20px" onmousedown="reset()"></canvas>
 
         <div id="sideBox">
-            <h2 class="ottosans" id="heading">Dienstleister</h2>
-            <p style="margin-top: 20px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <ul style="margin-top: 30px">
-                <li>Lorem ipsum dolor</li>
-                <li>consectetur adipisicing elit</li>
-                <li>sed do eiusmod</li>
-            </ul>
 
-            <table id="sideBoxTable">
-                <tr id="tabelHeading">
-                    <td>Anforderungen</td>
-                    <td id="secondCell"></td>
-                </tr>
-                <tr>
-                    <td class="caption">Sehr klein</td>
-                    <td>X</td>
-                </tr>
-                <tr>
-                    <td class="caption">Klein</td>
-                    <td>X</td>
-                </tr>
-                <tr>
-                    <td class="caption">Mittelgroß</td>
-                    <td>X</td>
-                </tr>
-                <tr>
-                    <td class="caption">Groß</td>
-                    <td>X</td>
-                </tr>
-                <tr>
-                    <td class="caption">Sehr groß</td>
-                    <td></td>
-                </tr>
-            </table>
         </div>
 
         <div id="controller">

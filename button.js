@@ -12,4 +12,5 @@ function moveButton() {
         buttonState = 1;
         reDrawEverything();
     }
+    reset();
 }
