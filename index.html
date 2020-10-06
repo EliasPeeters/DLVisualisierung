@@ -50,12 +50,13 @@
             }
 
             #sideBox {
-                width: 300px;
+                width: 270px;
                 height: 830px;
                 border: 1px solid #c4c4c4;
                 position: absolute;
                 top: 80px;
                 padding-left: 30px;
+                padding-right: 30px;
                 padding-top: 30px;
                 background-color: white;
             }
@@ -136,6 +137,30 @@
                 left: 130px;
 
             }
+
+            #sideBoxTable {
+                width: 270px;
+                border-collapse: collapse;
+                border: 2px solid rgb(238, 238, 238);
+                margin-top: 30px;
+            }
+
+            td, tr {
+                border: 2px solid rgb(238, 238, 238);
+                padding: 5px;
+            }
+
+            #tabelHeading {
+                background-color: rgb(238, 238, 238);
+            }
+
+            #secondCell {
+                width: 100px;
+            }
+
+            .caption {
+                font-weight: 500;
+            }
         </style>
 
     </head>
@@ -151,8 +176,42 @@
     <div id="space"></div>
     <img alt="test" src="images/Otto.png" id="OTTO">
         <canvas id="canvas" style="position:absolute; top: 80px; left: 20px" onmousedown="reset()"></canvas>
+
         <div id="sideBox">
             <h2 class="ottosans" id="heading">Dienstleister</h2>
+            <p style="margin-top: 20px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <ul style="margin-top: 30px">
+                <li>Lorem ipsum dolor</li>
+                <li>consectetur adipisicing elit</li>
+                <li>sed do eiusmod</li>
+            </ul>
+
+            <table id="sideBoxTable">
+                <tr id="tabelHeading">
+                    <td>Anforderungen</td>
+                    <td id="secondCell"></td>
+                </tr>
+                <tr>
+                    <td class="caption">Sehr klein</td>
+                    <td>X</td>
+                </tr>
+                <tr>
+                    <td class="caption">Klein</td>
+                    <td>X</td>
+                </tr>
+                <tr>
+                    <td class="caption">Mittelgroß</td>
+                    <td>X</td>
+                </tr>
+                <tr>
+                    <td class="caption">Groß</td>
+                    <td>X</td>
+                </tr>
+                <tr>
+                    <td class="caption">Sehr groß</td>
+                    <td></td>
+                </tr>
+            </table>
         </div>
 
         <div id="controller">
