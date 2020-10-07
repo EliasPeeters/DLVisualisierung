@@ -55,7 +55,7 @@ function calculateSize() {
 }
 
 function setImages() {
-    let shops = document.getElementsByClassName('SHOP');
+    let shopsList = document.getElementsByClassName('SHOP');
     let dl = document.getElementsByClassName('DL');
 
     let dl2 = [];
@@ -77,22 +77,24 @@ function setImages() {
 
     console.log(dl2);
 
-    let angleForEachShop = 360/shops.length;
+    let angleForEachShop = 360/shopsList.length;
     let angleForEachDL = 360/(dl2.length-1);
 
-    for (var i = 0; i < shops.length; i++) {
+    for (var i = 0; i < shopsList.length; i++) {
 
         let x = centerX + innerCircleRadius * Math.sin(angleForEachShop*i* ( Math.PI / 180 ));
         let y = centerY + innerCircleRadius * Math.cos(angleForEachShop*i* ( Math.PI / 180 ));
-        let id = shops[i].id;
-        shops[i].style.position = 'absolute';
+        let id = shopsList[i].id;
+        shopsList[i].style.position = 'absolute';
         //shops[i].style.left = x-shopsRadius+canvasLeft-shadowRadius + "px";
-        shops[i].style.left = x-shopsRadius-shadowRadius+canvasLeft + "px";
+        shopsList[i].style.left = x-shopsRadius-shadowRadius+canvasLeft + "px";
         //shops[i].style.top = y-shopsRadius+canvasTop-shadowRadius + "px";
-        shops[i].style.top = y-shopsRadius-shadowRadius+canvasTop + "px";
-        shops[i].height = shopsRadius*2;
-        shops[i].width = shopsRadius*2;
+        shopsList[i].style.top = y-shopsRadius-shadowRadius+canvasTop + "px";
+        shopsList[i].height = shopsRadius*2;
+        shopsList[i].width = shopsRadius*2;
         shopsListCords.push([id, x, y]);
+        shops[id].x = x;
+        shops[id].y = y;
     }
 
     for (var i = 1; i < dl2.length; i++) {
@@ -221,6 +223,21 @@ function press(input, type) {
             }
         }
 
+        console.log(dl[input]);
+
+        for (var i = 0; i < dl[input].shopSysteme.length; i++) {
+            document.getElementById(dl[input].shopSysteme[i]).style.borderColor = 'rgba(240, 128, 128, 1)';
+
+            ctx.beginPath();
+            ctx.moveTo((leftInt-canvasLeft+heightInt/2)+moveX, (topInt-canvasTop+heightInt/2)+moveY);
+            ctx.lineTo(shops[dl[input].shopSysteme[i]].x+moveX, shops[dl[input].shopSysteme[i]].y+moveY);
+            console.log(shops[dl[input].shopSysteme[i]].x);
+            console.log(shops[dl[input].shopSysteme[i]].y);
+            ctx.strokeStyle = '#C8C8C8';
+            ctx.stroke();
+        }
+
+        /*
         for (var i = 0; i < storage[counter].length; i++) {
             if (storage[counter + 1][i] === 1) {
                 for (var ii = 0; ii < shopsListCords.length; ii++) {
@@ -229,15 +246,19 @@ function press(input, type) {
                         ctx.beginPath();
                         ctx.moveTo((leftInt-canvasLeft+heightInt/2)+moveX, (topInt-canvasTop+heightInt/2)+moveY);
                         ctx.lineTo(shopsListCords[ii][1]+moveX, shopsListCords[ii][2]+moveY);
+                        console.log(shopsListCords[ii][1]);
+                        console.log(shopsListCords[ii][2]);
                         ctx.strokeStyle = '#C8C8C8';
                         ctx.stroke();
 
-                        document.getElementById(shopsListCords[ii][0]).style.borderColor = 'rgba(240, 128, 128, 1)';
+
                         break;
                     }
                 }
             }
         }
+        */
+
     } else if (type === 'SHOP') {
         for (var i = 1; i<storage[0].length; i++) {
             if (storage[0][i] === input) {
