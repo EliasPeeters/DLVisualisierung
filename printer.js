@@ -201,6 +201,9 @@ function press(input, type) {
             document.getElementById('medium').innerHTML = shops[input].medium;
             document.getElementById('big').innerHTML = shops[input].big;
             document.getElementById('verybig').innerHTML = shops[input].verybig;
+            document.getElementById('bullet1').innerHTML = shops[input].bullet1;
+            document.getElementById('bullet2').innerHTML = shops[input].bullet2;
+            document.getElementById('bullet3').innerHTML = shops[input].bullet3;
         }
     } else {
         document.getElementById('heading').innerHTML = input;

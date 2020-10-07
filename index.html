@@ -59,6 +59,12 @@
                 padding-right: 30px;
                 padding-top: 30px;
                 background-color: white;
+                animation: appear 3s steps(1000, end);
+            }
+
+            @animation appear {
+                from {opacity: 0},
+                to {opacity: 1}
             }
 
             .SHOP {
@@ -172,6 +178,7 @@
                 from { width: 0px }
                 to { width: 100% }
             }
+
         </style>
 
     </head>
