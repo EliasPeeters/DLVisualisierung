@@ -18,6 +18,9 @@ var dl = {
             'Intershop',
             'Cosmoshop',
             'Commercetools'
+        ],
+        WaWi: [
+            'Actindo'
         ]
     },
     Plentymarkets: {
@@ -37,6 +40,9 @@ var dl = {
             'Oxid',
             'Magento',
             'Woocommerce'
+        ],
+        WaWi: [
+
         ]
     },
     Tradebyte: {
@@ -53,6 +59,9 @@ var dl = {
         shopSysteme: [
             'Shopware',
             'Oxid'
+        ],
+        WaWi: [
+
         ]
     },
     Vario: {
@@ -76,6 +85,9 @@ var dl = {
             'Presta',
             'Woocommerce',
             'xtCommerce'
+        ],
+        WaWi: [
+
         ]
     },
     Lengow: {
@@ -95,6 +107,9 @@ var dl = {
             'Presta',
             'Woocommerce',
             'Magento'
+        ],
+        WaWi: [
+
         ]
     },
     Microtech: {
@@ -114,6 +129,9 @@ var dl = {
             'Magento',
             'Gambio',
             'xtCommerce'
+        ],
+        WaWi: [
+
         ]
     },
     Channable: {
@@ -133,6 +151,9 @@ var dl = {
             'Magento',
             'Lightspeed',
             'Woocommerce'
+        ],
+        WaWi: [
+
         ]
     },
     _004: {
@@ -147,6 +168,9 @@ var dl = {
         big: 'X',
         verybig: '',
         shopSysteme: [
+        ],
+        WaWi: [
+
         ]
     },
     Magnalister: {
@@ -169,6 +193,9 @@ var dl = {
             'Gambio',
             'xtCommerce',
             'Woocommerce'
+        ],
+        WaWi: [
+
         ]
     },
     Globalsys: {
@@ -186,6 +213,9 @@ var dl = {
             'Shopware',
             'Oxid',
             'Magento'
+        ],
+        WaWi: [
+
         ]
     },
     JTL: {
@@ -207,6 +237,9 @@ var dl = {
             'Gambio',
             'Woocommerce',
 
+        ],
+        WaWi: [
+
         ]
     },
     novomind: {
@@ -221,6 +254,9 @@ var dl = {
         big: 'X',
         verybig: '',
         shopSysteme: [
+        ],
+        WaWi: [
+
         ]
     },
     channeladvisor: {
@@ -235,6 +271,9 @@ var dl = {
         big: 'X',
         verybig: '',
         shopSysteme: [
+        ],
+        WaWi: [
+
         ]
     }
 }

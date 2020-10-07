@@ -1,4 +1,4 @@
-var shopscontent = '<h2 class="typing" id="heading">Dienstleister</h2><p style="margin-top: 20px" >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><ul style="margin-top: 30px"><li id="bullet1">Lorem ipsum dolor</li><li id="bullet2">consectetur adipisicing elit</li><li id="bullet3">sed do eiusmod</li></ul><table id="sideBoxTable"><tr id="tabelHeading"><td>Anforderungen</td><td id="secondCell"></td></tr><tr><td class="caption">Sehr klein</td><td id="verysmall"></td></tr><tr><td class="caption">Klein</td><td id="small"></td></tr><tr><td class="caption">Mittelgroß</td><td id="medium"></td></tr><tr><td class="caption">Groß</td><td id="big"></td></tr><tr><td class="caption">Sehr groß</td><td id="verybig"></td></tr></table>'
+var shopscontent = '<h2 class="typing" id="heading">Dienstleister</h2><p style="margin-top: 20px" >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><ul style="margin-top: 30px"><li id="bullet1">Lorem ipsum dolor</li><li id="bullet2">consectetur adipisicing elit</li><li id="bullet3">sed do eiusmod</li></ul><table id="sideBoxTable"><tr id="tabelHeading"><td>Anforderungen</td><td id="secondCell"></td></tr><tr><td class="caption">Sehr klein</td><td id="verysmall"></td></tr><tr><td class="caption">Klein</td><td id="small"></td></tr><tr><td class="caption">Mittelgroß</td><td id="medium"></td></tr><tr><td class="caption">Groß</td><td id="big"></td></tr><tr><td class="caption">Sehr groß</td><td id="verybig"></td></tr></table><div id="buttonWebseite" >Zur Webseite</div>'
 
 var shops = {
     Shopify: {
@@ -12,6 +12,7 @@ var shops = {
         medium: 'X',
         big: 'X',
         verybig: ' ',
+        url: 'https://www.shopify.de'
     },
 
     Shopware: {
@@ -27,7 +28,7 @@ var shops = {
         verybig: 'X',
     },
     Intershop: {
-        title: 'Shopify',
+        title: 'Intershop',
         text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         bullet1: 'Lorem ipsum dolor',
         bullet2: 'Lorem ipsum dolor',
@@ -39,7 +40,7 @@ var shops = {
         verybig: ' ',
     },
     Oxid: {
-        title: 'Shopify',
+        title: 'Oxid',
         text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         bullet1: 'Lorem ipsum dolor',
         bullet2: 'Lorem ipsum dolor',
@@ -51,7 +52,7 @@ var shops = {
         verybig: ' ',
     },
     Cosmoshop: {
-        title: 'Shopify',
+        title: 'Cosmoshop',
         text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         bullet1: 'Lorem ipsum dolor',
         bullet2: 'Lorem ipsum dolor',
@@ -63,7 +64,7 @@ var shops = {
         verybig: ' ',
     },
     Magento: {
-        title: 'Shopify',
+        title: 'Magento',
         text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         bullet1: 'Lorem ipsum dolor',
         bullet2: 'Lorem ipsum dolor',
@@ -75,7 +76,7 @@ var shops = {
         verybig: ' ',
     },
     Commercetools: {
-        title: 'Shopify',
+        title: 'Commercetools',
         text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         bullet1: 'Lorem ipsum dolor',
         bullet2: 'Lorem ipsum dolor',
@@ -87,7 +88,7 @@ var shops = {
         verybig: ' ',
     },
     Modified: {
-        title: 'Shopify',
+        title: 'Modified',
         text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         bullet1: 'Lorem ipsum dolor',
         bullet2: 'Lorem ipsum dolor',
@@ -99,7 +100,7 @@ var shops = {
         verybig: ' ',
     },
     Gambio: {
-        title: 'Shopify',
+        title: 'Gambio',
         text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         bullet1: 'Lorem ipsum dolor',
         bullet2: 'Lorem ipsum dolor',
@@ -111,7 +112,7 @@ var shops = {
         verybig: ' ',
     },
     Woocommerce: {
-        title: 'Shopify',
+        title: 'Woocommerce',
         text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         bullet1: 'Lorem ipsum dolor',
         bullet2: 'Lorem ipsum dolor',
@@ -123,7 +124,7 @@ var shops = {
         verybig: ' ',
     },
     Presta: {
-        title: 'Shopify',
+        title: 'Presta',
         text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         bullet1: 'Lorem ipsum dolor',
         bullet2: 'Lorem ipsum dolor',
@@ -135,7 +136,7 @@ var shops = {
         verybig: ' ',
     },
     xtCommerce: {
-        title: 'Shopify',
+        title: 'xtCommerce',
         text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         bullet1: 'Lorem ipsum dolor',
         bullet2: 'Lorem ipsum dolor',
@@ -159,7 +160,7 @@ var shops = {
         verybig: ' ',
     },
     OScommerce: {
-        title: 'Shopify',
+        title: 'OScommerce',
         text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         bullet1: 'Lorem ipsum dolor',
         bullet2: 'Lorem ipsum dolor',
@@ -171,7 +172,7 @@ var shops = {
         verybig: ' ',
     },
     einsundeins: {
-        title: 'Shopify',
+        title: '1und1',
         text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         bullet1: 'Lorem ipsum dolor',
         bullet2: 'Lorem ipsum dolor',
@@ -183,7 +184,7 @@ var shops = {
         verybig: ' ',
     },
     Epages: {
-        title: 'Shopify',
+        title: 'Epages',
         text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         bullet1: 'Lorem ipsum dolor',
         bullet2: 'Lorem ipsum dolor',

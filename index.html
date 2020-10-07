@@ -86,6 +86,15 @@
                 transition: 500ms;
             }
 
+            .WaWi {
+                border: 5px solid rgba(240, 128, 128, 0);
+                border-radius: 50%;
+
+                border-color: rgba(240, 128, 128, 0);
+                transition: visibility 0s, opacity 0.5s linear;
+                transition: 500ms;
+            }
+
 
             #OTTO {
                 z-index: 150;
@@ -113,6 +122,21 @@
             }
 
             #mover {
+                height: 28px;
+                padding-top: 7px;
+                border-radius: 3px;
+                background-color: #d4021d;
+                color: white;
+                width: 130px;
+                text-align: center;
+                transition: 300ms;
+                position: relative;
+                left: 0px;
+                float: inherit;
+                top: -70px;
+            }
+
+            #moverWaWi {
                 height: 28px;
                 padding-top: 7px;
                 border-radius: 3px;
@@ -167,7 +191,7 @@
             }
 
             .typing {
-                animation: typing 1s steps(1000, end);
+                animation: typing 0.5s steps(1000, end);
                 white-space: nowrap;
                 overflow: hidden;
             }
@@ -181,6 +205,24 @@
                 to { width: 100% }
             }
 
+            #buttonWebseite {
+                height: 28px;
+                padding-top: 7px;
+                border-radius: 3px;
+                background-color: #d4021d;
+                color: white;
+                width: 260px;
+                text-align: center;
+                transition: 300ms;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            #buttonWebseite:Hover {
+                cursor: pointer;
+                background-color: rgb(162, 7, 28);
+            }
+
         </style>
 
     </head>
@@ -190,9 +232,16 @@
     <script src="button.js"></script>
     <script src="shops.js"></script>
     <script src="dl.js"></script>
+    <script src="wawi.js"></script>
+
+    <script>
+        function openWebsite(url) {
+            window.open(url);
+        }
+    </script>
 
     <div id="navigation">
-        <h1 id="headingPage">Dienstleister Visualisierung</h1>
+        <h1 id="headingPage" >Dienstleister Visualisierung</h1>
     </div>
 
     <div id="space"></div>
@@ -201,6 +250,7 @@
 
         <div id="sideBox">
 
+            <div id="buttonWebseite" >Zur Webseite</div>
         </div>
 
         <div id="controller">
@@ -209,6 +259,12 @@
                 <div class="buttonText">Aktuell</div>
                 <div class="buttonText" id="buttonText2">Zukunft</div>
                 <div id="mover" >Aktuell</div>
+            </div>
+
+            <div id="button" onmousedown="moveButtonWaWi()">
+                <div class="buttonText" id="off">Aus</div>
+                <div class="buttonText" id="buttonText2">An</div>
+                <div id="moverWaWi">WaWis</div>
             </div>
         </div>
 
@@ -243,6 +299,7 @@
         <img alt="test" src="images/globalsys.png" class="DL" id="Globalsys" onmousedown="press('Globalsys', 'DL')">
         <img alt="test" src="images/magnalister.png" id="Magnalister" class="DL" onmousedown="press('Magnalister', 'DL')">
 
+        <img alt="test" src="images/Actindo.png" id="Actindo" class="WaWi" onmousedown="press('Actindo', 'WaWi')">
 
 
 

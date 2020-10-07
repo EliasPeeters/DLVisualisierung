@@ -4,11 +4,14 @@ let centerX = 400;
 let centerY = 400;
 let outerCircleRadius = 150;
 
+let wawiCircleRadius = 100;
+
 var shopsListCords = [];
 var dlListCords = [];
 
 var shopsRadius = 35;
 var dlRadius = 25;
+var wawiRadius = 25;
 
 var canvasTop = 10000;
 var canvasLeft = 20;
@@ -37,11 +40,21 @@ function calculateSize() {
     centerX = size / 2;
     centerY = size / 2;
 
-    outerCircleRadius = size * 0.1875;
-    innerCircleRadius = size * 0.3125;
 
-    dlRadius = size / 32;
-    shopsRadius = size / 23;
+    if (buttonStateWaWi === 0) {
+        outerCircleRadius = size * 0.23;
+        innerCircleRadius = size * 0.39;
+        dlRadius = size / 24;
+        shopsRadius = size / 19;
+    } else {
+        outerCircleRadius = size * 0.1875;
+        innerCircleRadius = size * 0.30;
+        wawiCircleRadius = size * 0.41;
+        wawiRadius = size / 23;
+        dlRadius = size / 32;
+        shopsRadius = size / 23;
+    }
+
 
     ottoLogoSize = size / 5;
 
@@ -56,7 +69,8 @@ function calculateSize() {
 
 function setImages() {
     let shopsList = document.getElementsByClassName('SHOP');
-    let dl = document.getElementsByClassName('DL');
+    let dlList = document.getElementsByClassName('DL');
+    let wawiList = document.getElementsByClassName('WaWi');
 
     let dl2 = [];
     dl2.push(storage[0]);
@@ -77,8 +91,11 @@ function setImages() {
 
     console.log(dl2);
 
+
+
     let angleForEachShop = 360/shopsList.length;
     let angleForEachDL = 360/(dl2.length-1);
+    let angelForWawi = 360/(wawiList.length);
 
     for (var i = 0; i < shopsList.length; i++) {
 
@@ -109,8 +126,32 @@ function setImages() {
         element.width = dlRadius*2;
         //element.style.borderColor = 'rgba(240, 128, 128, 1)';
         dlListCords.push([id, x, y])
+        dl[id].x = x;
+        dl[id].y = y;
+    }
+
+    for (var i = 0; i < wawiList.length; i++) {
+        if (buttonStateWaWi === 0) {
+            wawiList[i].style.visibility = 'hidden';
+            wawiList[i].style.opacity = '0';
+        } else {
+            wawiList[i].style.visibility = 'visible';
+            wawiList[i].style.opacity = '1';
+            let x = centerX + wawiCircleRadius * Math.sin(angelForWawi*i* ( Math.PI / 180 ));
+            let y = centerY + wawiCircleRadius * Math.cos(angelForWawi*i* ( Math.PI / 180 ));
+            let = id = wawiList[i].id;
+            wawiList[i].style.position = 'absolute';
+            wawiList[i].style.left = x-wawiRadius-shadowRadius+canvasLeft + "px";
+            wawiList[i].style.top = y-wawiRadius-shadowRadius+canvasTop + "px";
+            wawiList[i].height = wawiRadius*2;
+            wawiList[i].width = wawiRadius*2;
+            wawi[id].x = x;
+            wawi[id].y = y;
+        }
 
     }
+
+
 
     /*
 
@@ -206,6 +247,9 @@ function press(input, type) {
             document.getElementById('bullet1').innerHTML = shops[input].bullet1;
             document.getElementById('bullet2').innerHTML = shops[input].bullet2;
             document.getElementById('bullet3').innerHTML = shops[input].bullet3;
+            document.getElementById('buttonWebseite').onmousedown = function() {
+                window.open(shops[input].url)
+            }
         }
     } else {
         document.getElementById('heading').innerHTML = input;
@@ -215,75 +259,45 @@ function press(input, type) {
     var counter;
     if (type === 'DL') {
 
-
-        for (var i = 1; i < storage.length; i++) {
-            if (storage[i][0] === input) {
-                counter = i - 1;
-                break;
-            }
-        }
-
-        console.log(dl[input]);
-
         for (var i = 0; i < dl[input].shopSysteme.length; i++) {
             document.getElementById(dl[input].shopSysteme[i]).style.borderColor = 'rgba(240, 128, 128, 1)';
 
             ctx.beginPath();
             ctx.moveTo((leftInt-canvasLeft+heightInt/2)+moveX, (topInt-canvasTop+heightInt/2)+moveY);
             ctx.lineTo(shops[dl[input].shopSysteme[i]].x+moveX, shops[dl[input].shopSysteme[i]].y+moveY);
-            console.log(shops[dl[input].shopSysteme[i]].x);
-            console.log(shops[dl[input].shopSysteme[i]].y);
             ctx.strokeStyle = '#C8C8C8';
             ctx.stroke();
         }
+        if (buttonStateWaWi !== 0) {
+            for (var i = 0; i < dl[input].WaWi.length; i++) {
+                document.getElementById(dl[input].WaWi[i]).style.borderColor = 'rgba(240, 128, 128, 1)';
 
-        /*
-        for (var i = 0; i < storage[counter].length; i++) {
-            if (storage[counter + 1][i] === 1) {
-                for (var ii = 0; ii < shopsListCords.length; ii++) {
-                    if (storage[0][i] === shopsListCords[ii][0]) {
-
-                        ctx.beginPath();
-                        ctx.moveTo((leftInt-canvasLeft+heightInt/2)+moveX, (topInt-canvasTop+heightInt/2)+moveY);
-                        ctx.lineTo(shopsListCords[ii][1]+moveX, shopsListCords[ii][2]+moveY);
-                        console.log(shopsListCords[ii][1]);
-                        console.log(shopsListCords[ii][2]);
-                        ctx.strokeStyle = '#C8C8C8';
-                        ctx.stroke();
-
-
-                        break;
-                    }
-                }
+                ctx.beginPath();
+                ctx.moveTo((leftInt-canvasLeft+heightInt/2)+moveX, (topInt-canvasTop+heightInt/2)+moveY);
+                ctx.lineTo(wawi[dl[input].WaWi[i]].x+moveX, wawi[dl[input].WaWi[i]].y+moveY);
+                ctx.strokeStyle = '#C8C8C8';
+                ctx.stroke();
             }
         }
-        */
+
 
     } else if (type === 'SHOP') {
-        for (var i = 1; i<storage[0].length; i++) {
-            if (storage[0][i] === input) {
-                counter = i;
-                break;
-            }
-        }
 
-        for (var i = 1; i<storage.length; i++) {
-            if (storage[i][counter] === 1) {
-                console.log(storage[i][0]);
-                for (var ii = 0;  ii < dlListCords.length; ii++) {
-                    if (storage[i][0] === dlListCords[ii][0]) {
-                        ctx.beginPath();
-                        ctx.moveTo((leftInt-canvasLeft+heightInt/2)+moveX, (topInt-canvasTop+heightInt/2)+moveY);
-                        ctx.lineTo(dlListCords[ii][1]+moveX, dlListCords[ii][2]+moveY);
-                        ctx.strokeStyle = '#C8C8C8';
-                        ctx.stroke();
+        var allDLArray  = Object.keys(dl)
+        for (var i = 0; i < allDLArray.length; i++) {
+            for (var ii = 0; ii < dl[allDLArray[i]].shopSysteme.length; ii++) {
+                if (dl[allDLArray[i]].shopSysteme[ii] === input) {
+                    ctx.beginPath();
+                    ctx.moveTo((leftInt-canvasLeft+heightInt/2)+moveX, (topInt-canvasTop+heightInt/2)+moveY);
+                    ctx.lineTo(dl[allDLArray[i]].x+moveX, dl[allDLArray[i]].y+moveY);
+                    ctx.strokeStyle = '#C8C8C8';
+                    ctx.stroke();
 
-                        document.getElementById(dlListCords[ii][0]).style.borderColor = 'rgba(240, 128, 128, 1)';
-                        break;
-                    }
+                    document.getElementById(allDLArray[i]).style.borderColor = 'rgba(240, 128, 128, 1)';
                 }
             }
         }
+
         console.log(counter);
     }
 
@@ -307,7 +321,10 @@ function clear() {
     for (var i = 0; i < imagesDL.length; i++) {
         imagesDL[i].style.borderColor = 'rgba(240, 128, 128, 0)';
     }
-
+    var imagesWaWi = document.getElementsByClassName("WaWi");
+    for (var i = 0; i < imagesWaWi.length; i++) {
+        imagesWaWi[i].style.borderColor = 'rgba(240, 128, 128, 0)';
+    }
 
 }
 
@@ -324,6 +341,13 @@ function drawBackground() {
     ctx.arc(centerX+moveX, centerY+moveY, outerCircleRadius, 0, 2 * Math.PI);
     ctx.strokeStyle = '#969696';
     ctx.stroke();
+
+    if (buttonStateWaWi !== 0) {
+        ctx.beginPath();
+        ctx.arc(centerX+moveX, centerY+moveY, wawiCircleRadius, 0, 2 * Math.PI);
+        ctx.strokeStyle = '#969696';
+        ctx.stroke();
+    }
 
 }
 
