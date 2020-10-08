@@ -95,7 +95,7 @@ function setImages() {
 
     for (var i = 0; i < allWaWI.length; i++) {
         if (wawi[allWaWI[i]].angebunden === true) {
-            alert(allWaWI[i])
+            //alert(allWaWI[i])
         }
     }
 

@@ -1,5 +1,5 @@
 var buttonState = 0;
-var buttonStateWaWi = 0;\
+var buttonStateWaWi = 0;
 var futureVisible = false;
 
 function moveButton() {
