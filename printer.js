@@ -24,6 +24,7 @@ var moveY = 0;
 
 
 
+
 function calculateSize() {
 
     let size = window.innerHeight - 100 ;
@@ -68,6 +69,7 @@ function calculateSize() {
 }
 
 function setImages() {
+    setImagesNew();
     let shopsList = document.getElementsByClassName('SHOP');
     let dlList = document.getElementsByClassName('DL');
     let wawiList = document.getElementsByClassName('WaWi');
