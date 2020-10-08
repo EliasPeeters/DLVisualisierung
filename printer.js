@@ -219,6 +219,29 @@ window.onload = function () {
 */
 };
 
+function fillsideBox(input, type) {
+    if (type === 'SHOP') {
+
+        document.getElementById('verysmall').innerHTML = input.verysmall;
+        document.getElementById('small').innerHTML = input.small;
+        document.getElementById('medium').innerHTML = input.medium;
+        document.getElementById('big').innerHTML = input.big;
+        document.getElementById('verybig').innerHTML = input.verybig;
+    } else if (type === 'DL') {
+        document.getElementById('Shopsystem').innerHTML = input.Shopsystem;
+        document.getElementById('PimSystem').innerHTML = input.PimSystem;
+        document.getElementById('WaWi').innerHTML = input.WaWiSystem;
+    }
+    document.getElementById('heading').innerHTML = input.title;
+
+    document.getElementById('bullet1').innerHTML = input.bullet1;
+    document.getElementById('bullet2').innerHTML = input.bullet2;
+    document.getElementById('bullet3').innerHTML = input.bullet3;
+    document.getElementById('buttonWebseite').onmousedown = function() {
+        window.open(input.url)
+    }
+}
+
 function press(input, type) {
     clear();
     var leftString = document.getElementById(input).style.left;
@@ -233,27 +256,21 @@ function press(input, type) {
     var c = document.getElementById("canvas");
     var ctx = c.getContext("2d");
 
-    document.getElementById('sideBox').innerHTML = shopscontent;
+
     if (type === 'SHOP') {
+        document.getElementById('sideBox').innerHTML = shopscontent;
         if (shops[input] === undefined) {
             document.getElementById('heading').innerHTML = input;
         } else {
-            document.getElementById('heading').innerHTML = shops[input].title;
-            document.getElementById('verysmall').innerHTML = shops[input].verysmall;
-            document.getElementById('small').innerHTML = shops[input].small;
-            document.getElementById('medium').innerHTML = shops[input].medium;
-            document.getElementById('big').innerHTML = shops[input].big;
-            document.getElementById('verybig').innerHTML = shops[input].verybig;
-            document.getElementById('bullet1').innerHTML = shops[input].bullet1;
-            document.getElementById('bullet2').innerHTML = shops[input].bullet2;
-            document.getElementById('bullet3').innerHTML = shops[input].bullet3;
-            document.getElementById('buttonWebseite').onmousedown = function() {
-                window.open(shops[input].url)
-            }
+            fillsideBox(shops[input], type)
         }
+    } else if (type === 'DL'){
+        document.getElementById('sideBox').innerHTML = dlcontent;
+        fillsideBox(dl[input], type);
     } else {
         document.getElementById('heading').innerHTML = input;
     }
+
 
 
     var counter;
