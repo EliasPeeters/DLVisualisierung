@@ -1,16 +1,19 @@
 var buttonState = 0;
-var buttonStateWaWi = 0;
+var buttonStateWaWi = 0;\
+var futureVisible = false;
 
 function moveButton() {
     if (buttonState === 1) {
         document.getElementById('mover').style.left = '0px';
         document.getElementById('mover').innerHTML = 'Aktuell';
         buttonState = 0;
+        futureVisible = false;
         reDrawEverything();
     } else if (buttonState === 0) {
         document.getElementById('mover').style.left = '130px';
         document.getElementById('mover').innerHTML = 'Zukunft';
         buttonState = 1;
+        futureVisible = true;
         reDrawEverything();
     }
     reset();

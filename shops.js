@@ -13,6 +13,8 @@ var shops = {
         medium: 'X',
         big: 'X',
         verybig: ' ',
+        angebunden: true,
+        angebundenZukunft: true,
         url: 'https://www.shopify.de'
     },
 
