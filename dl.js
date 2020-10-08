@@ -10,6 +10,7 @@ var dl = {
         Shopsystem: '',
         PimSystem: '',
         WaWiSystem: '',
+        angebunden: true,
         shopSysteme: [
             'Shopware',
             'Shopify',
