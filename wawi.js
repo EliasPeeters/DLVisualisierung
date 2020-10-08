@@ -1,6 +1,7 @@
 var wawi = {
     Actindo: {
-        title: 'Actindo'
+        title: 'Actindo',
+        angebunden: true
     },
     Sage: {
         titel: 'sage'

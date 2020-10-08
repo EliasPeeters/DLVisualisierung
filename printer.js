@@ -89,6 +89,15 @@ function setImages() {
             }
     }
 
+    var allWaWI = Object.keys(wawi);
+
+    for (var i = 0; i < allWaWI.length; i++) {
+        if (wawi[allWaWI[i]].angebunden === true) {
+            alert(allWaWI[i])
+        }
+    }
+
+
     console.log(dl2);
 
 
