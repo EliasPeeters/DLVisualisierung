@@ -4,5 +4,11 @@ var wawi = {
     },
     Sage: {
         titel: 'sage'
+    },
+    Pixi: {
+      titel: 'Pixi'
+    },
+    Xentral: {
+      titel: 'Xentral'
     }
 }

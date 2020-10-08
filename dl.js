@@ -7,7 +7,6 @@ var dl = {
         text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         bullet1: 'Lorem ipsum dolor',
         bullet2: 'Lorem ipsum dolor',
-        bullet3: 'Lorem ipsum dolor',
         Shopsystem: '',
         PimSystem: '',
         WaWiSystem: '',
@@ -36,6 +35,7 @@ var dl = {
         WaWiSystem: 'X',
         big: 'X',
         verybig: '',
+        angebunden: true,
         shopSysteme: [
             'Shopware',
             'Shopify',
@@ -58,12 +58,13 @@ var dl = {
         WaWiSystem: '',
         big: 'X',
         verybig: '',
+        angebunden: true,
         shopSysteme: [
             'Shopware',
             'Oxid'
         ],
         WaWi: [
-
+          'Pixi'
         ]
     },
     Vario: {
@@ -77,6 +78,7 @@ var dl = {
         WaWiSystem: '',
         big: 'X',
         verybig: '',
+        angebunden: false,
         shopSysteme: [
             'Shopware',
             'Shopify',
@@ -103,6 +105,7 @@ var dl = {
         WaWiSystem: '',
         big: 'X',
         verybig: '',
+        angebunden: false,
         shopSysteme: [
             'Shopware',
             'Shopify',
@@ -125,6 +128,7 @@ var dl = {
         WaWiSystem: '',
         big: 'X',
         verybig: '',
+        angebunden: false,
         shopSysteme: [
             'Shopware',
             'Oxid',
@@ -147,6 +151,7 @@ var dl = {
         WaWiSystem: '',
         big: 'X',
         verybig: '',
+        angebunden: false,
         shopSysteme: [
             'Shopware',
             'Presta',
@@ -169,6 +174,7 @@ var dl = {
         WaWiSystem: '',
         big: 'X',
         verybig: '',
+        angebunden: false,
         shopSysteme: [
         ],
         WaWi: [
@@ -186,6 +192,7 @@ var dl = {
         WaWiSystem: '',
         big: 'X',
         verybig: '',
+        angebunden: false,
         shopSysteme: [
             'Shopware',
             'Shopify',
@@ -211,6 +218,7 @@ var dl = {
         WaWiSystem: '',
         big: 'X',
         verybig: '',
+        angebunden: false,
         shopSysteme: [
             'Shopware',
             'Oxid',
@@ -231,6 +239,7 @@ var dl = {
         WaWiSystem: 'X',
         big: 'X',
         verybig: '',
+        angebunden: false,
         shopSysteme: [
             'Shopware',
             'Shopify',
@@ -255,6 +264,7 @@ var dl = {
         WaWiSystem: '',
         big: 'X',
         verybig: '',
+        angebunden: true,
         shopSysteme: [
         ],
         WaWi: [
@@ -272,10 +282,11 @@ var dl = {
         WaWiSystem: '',
         big: 'X',
         verybig: '',
+        angebunden: true,
         shopSysteme: [
         ],
         WaWi: [
-
+          'Pixi'
         ]
     }
 }
