@@ -21,5 +21,29 @@ var wawi = {
     },
     Mircosoft: {
       titel: 'Mircosoft'
+    },
+    SOG: {
+      titel: 'SOG',
+      url: 'https://www.sog.de/erp-warenwirtschaft/'
+    },
+    SelectLine: {
+      titel: 'SelectLine',
+      url: 'https://www.selectline.de/'
+    },
+    Softengine: {
+      titel: 'SoftENGINE',
+      url: 'https://www.softengine.de/erp-software/'
+    },
+    vs4: {
+      titel: 'vs/4',
+      url: 'https://www.dug-software.de/D-G-Versandhaus-System-VS/4'
+    },
+    Evelopment: {
+      titel: 'E-velopment',
+      url: 'https://www.e-velopment.de/'
+    },
+    Ebootis: {
+      titel: 'eBootis',
+      url: 'https://www.ebootis.de/'
     }
 }
