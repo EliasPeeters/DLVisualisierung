@@ -70,6 +70,7 @@ function calculateSize() {
 
 function setImages() {
     setImagesNew();
+    /*
     let shopsList = document.getElementsByClassName('SHOP');
     let dlList = document.getElementsByClassName('DL');
     let wawiList = document.getElementsByClassName('WaWi');
@@ -163,7 +164,7 @@ function setImages() {
 
     }
 
-
+    */
 
     /*
 
@@ -268,7 +269,7 @@ function press(input, type) {
     var c = document.getElementById("canvas");
     var ctx = c.getContext("2d");
 
-
+    //sidebox fill
     if (type === 'SHOP') {
         document.getElementById('sideBox').innerHTML = shopscontent;
         if (shops[input] === undefined) {
@@ -279,10 +280,11 @@ function press(input, type) {
     } else if (type === 'DL'){
         document.getElementById('sideBox').innerHTML = dlcontent;
         fillsideBox(dl[input], type);
+    } else if (type === 'WaWi') {
+        document.getElementById('sideBox').innerHTML = wawicontent;
     } else {
         document.getElementById('heading').innerHTML = input;
     }
-
 
 
     var counter;
@@ -293,6 +295,8 @@ function press(input, type) {
 
             ctx.beginPath();
             ctx.moveTo((leftInt-canvasLeft+heightInt/2)+moveX, (topInt-canvasTop+heightInt/2)+moveY);
+            var test = dl[input].shopSysteme[i];
+            var test2 = shops[dl[input].shopSysteme[i]].x;
             ctx.lineTo(shops[dl[input].shopSysteme[i]].x+moveX, shops[dl[input].shopSysteme[i]].y+moveY);
             ctx.strokeStyle = '#C8C8C8';
             ctx.stroke();
@@ -326,8 +330,6 @@ function press(input, type) {
                 }
             }
         }
-
-        console.log(counter);
     }
 
 
@@ -371,7 +373,7 @@ function drawBackground() {
     ctx.strokeStyle = '#969696';
     ctx.stroke();
 
-    if (buttonStateWaWi !== 0) {
+    if (wawiVisible) {
         ctx.beginPath();
         ctx.arc(centerX+moveX, centerY+moveY, wawiCircleRadius, 0, 2 * Math.PI);
         ctx.strokeStyle = '#969696';
