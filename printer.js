@@ -73,19 +73,19 @@ function setImages() {
     let wawiList = document.getElementsByClassName('WaWi');
 
     let dl2 = [];
-    dl2.push(storage[0]);
-    for (var i = 1; i < storage.length; i++) {
+    var allDL = Object.keys(dl);
+    for (var i = 0; i < allDL.length; i++) {
             if (buttonState === 0) {
-                if (storage[i][1] === 1) {
-                    dl2.push(storage[i]);
+                if (dl[allDL[i]].angebunden === true) {
+                    dl2.push(allDL[i]);
                 } else {
-                    document.getElementById(storage[i][0]).style.visibility = 'hidden';
-                    document.getElementById(storage[i][0]).style.opacity = '0';
+                    document.getElementById(allDL[i]).style.visibility = 'hidden';
+                    document.getElementById(allDL[i]).style.opacity = '0';
                 }
             } else {
-                dl2.push(storage[i]);
-                document.getElementById(storage[i][0]).style.visibility = 'visible';
-                document.getElementById(storage[i][0]).style.opacity = '1';
+                dl2.push(allDL[i]);
+                document.getElementById(allDL[i]).style.visibility = 'visible';
+                document.getElementById(allDL[i]).style.opacity = '1';
             }
     }
 
@@ -94,7 +94,7 @@ function setImages() {
 
 
     let angleForEachShop = 360/shopsList.length;
-    let angleForEachDL = 360/(dl2.length-1);
+    let angleForEachDL = 360/(dl2.length);
     let angelForWawi = 360/(wawiList.length);
 
     for (var i = 0; i < shopsList.length; i++) {
@@ -114,10 +114,11 @@ function setImages() {
         shops[id].y = y;
     }
 
-    for (var i = 1; i < dl2.length; i++) {
+
+    for (var i = 0; i < dl2.length; i++) {
         let x = centerX + outerCircleRadius * Math.sin(angleForEachDL*i* ( Math.PI / 180 ));
         let y = centerY + outerCircleRadius * Math.cos(angleForEachDL*i* ( Math.PI / 180 ));
-        var element = document.getElementById(dl2[i][0]);
+        var element = document.getElementById(dl2[i]);
         let id = element.id;
         element.style.position = 'absolute';
         element.style.left = x-dlRadius+canvasLeft-shadowRadius + "px";

@@ -13,6 +13,7 @@ var dl = {
         medium: 'X',
         big: 'X',
         verybig: '',
+        angebunden: true,
         shopSysteme: [
             'Shopware',
             'Shopify',
@@ -38,6 +39,7 @@ var dl = {
         medium: 'X',
         big: 'X',
         verybig: '',
+        angebunden: true,
         shopSysteme: [
             'Shopware',
             'Shopify',
@@ -60,12 +62,13 @@ var dl = {
         medium: 'X',
         big: 'X',
         verybig: '',
+        angebunden: true,
         shopSysteme: [
             'Shopware',
             'Oxid'
         ],
         WaWi: [
-
+          'Pixi'
         ]
     },
     Vario: {
@@ -79,6 +82,7 @@ var dl = {
         medium: 'X',
         big: 'X',
         verybig: '',
+        angebunden: false,
         shopSysteme: [
             'Shopware',
             'Shopify',
@@ -105,6 +109,7 @@ var dl = {
         medium: 'X',
         big: 'X',
         verybig: '',
+        angebunden: false,
         shopSysteme: [
             'Shopware',
             'Shopify',
@@ -127,6 +132,7 @@ var dl = {
         medium: 'X',
         big: 'X',
         verybig: '',
+        angebunden: false,
         shopSysteme: [
             'Shopware',
             'Oxid',
@@ -149,6 +155,7 @@ var dl = {
         medium: 'X',
         big: 'X',
         verybig: '',
+        angebunden: false,
         shopSysteme: [
             'Shopware',
             'Presta',
@@ -171,6 +178,7 @@ var dl = {
         medium: 'X',
         big: 'X',
         verybig: '',
+        angebunden: false,
         shopSysteme: [
         ],
         WaWi: [
@@ -188,6 +196,7 @@ var dl = {
         medium: 'X',
         big: 'X',
         verybig: '',
+        angebunden: false,
         shopSysteme: [
             'Shopware',
             'Shopify',
@@ -213,6 +222,7 @@ var dl = {
         medium: 'X',
         big: 'X',
         verybig: '',
+        angebunden: false,
         shopSysteme: [
             'Shopware',
             'Oxid',
@@ -233,6 +243,7 @@ var dl = {
         medium: 'X',
         big: 'X',
         verybig: '',
+        angebunden: false,
         shopSysteme: [
             'Shopware',
             'Shopify',
@@ -257,6 +268,7 @@ var dl = {
         medium: 'X',
         big: 'X',
         verybig: '',
+        angebunden: true,
         shopSysteme: [
         ],
         WaWi: [
@@ -274,10 +286,11 @@ var dl = {
         medium: 'X',
         big: 'X',
         verybig: '',
+        angebunden: true,
         shopSysteme: [
         ],
         WaWi: [
-
+          'Pixi'
         ]
     }
 }
