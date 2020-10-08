@@ -10,5 +10,11 @@ var wawi = {
     },
     Xentral: {
       titel: 'Xentral'
+    },
+    SAP: {
+      titel: 'SAP'
+    },
+    Mircosoft: {
+      titel: 'Mircosoft'
     }
 }

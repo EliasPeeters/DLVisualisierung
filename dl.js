@@ -22,7 +22,10 @@ var dl = {
         ],
         WaWi: [
             'Actindo',
-            'Sage'
+            'Sage',
+            'Xentral',
+            'Mircosoft',
+            'SAP'
         ]
     },
     Plentymarkets: {
