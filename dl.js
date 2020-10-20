@@ -26,7 +26,13 @@ var dl = {
             'Xentral',
             'Mircosoft',
             'SAP',
-            'Pixi'
+            'Pixi',
+            'SOG',
+            'SelectLine',
+            'Softengine',
+            'vs4',
+            'Evelopment',
+            'Ebootis'
         ]
     },
 

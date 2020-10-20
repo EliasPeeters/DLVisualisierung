@@ -218,7 +218,7 @@ window.onload = function () {
 
     calculateSize();
     drawBackground();
-
+    document.getElementById('sideBox').innerHTML = tutorial;
     setImages();
 
 
@@ -318,7 +318,7 @@ function press(input, type) {
 
     } else if (type === 'SHOP') {
 
-        var allDLArray  = Object.keys(dl)
+        var allDLArray  = Object.keys(dl);
         for (var i = 0; i < allDLArray.length; i++) {
             for (var ii = 0; ii < dl[allDLArray[i]].shopSysteme.length; ii++) {
                 if (dl[allDLArray[i]].shopSysteme[ii] === input) {
@@ -329,6 +329,22 @@ function press(input, type) {
                     ctx.stroke();
 
                     document.getElementById(allDLArray[i]).style.borderColor = 'rgba(240, 128, 128, 1)';
+                }
+            }
+        }
+    } else if (type === 'WaWi') {
+        var allDLArray  = Object.keys(dl);
+
+        for (var i = 0; i < allDLArray.length; i++) {
+            for (var ii = 0; ii < dl[allDLArray[i]].WaWi.length; ii++) {
+                if (dl[allDLArray[i]].WaWi[ii] === input) {
+                  ctx.beginPath();
+                  ctx.moveTo((leftInt-canvasLeft+heightInt/2)+moveX, (topInt-canvasTop+heightInt/2)+moveY);
+                  ctx.lineTo(dl[allDLArray[i]].x+moveX, dl[allDLArray[i]].y+moveY);
+                  ctx.strokeStyle = '#C8C8C8';
+                  ctx.stroke();
+
+                  document.getElementById(allDLArray[i]).style.borderColor = 'rgba(240, 128, 128, 1)';
                 }
             }
         }
@@ -387,5 +403,5 @@ function drawBackground() {
 function reset() {
     clear();
     drawBackground();
-    document.getElementById('sideBox').innerHTML = '';
+    document.getElementById('sideBox').innerHTML = tutorial;
 }
