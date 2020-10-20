@@ -22,7 +22,7 @@ var shadowRadius = 5;
 var moveX = 0;
 var moveY = 0;
 
-var tutorial = '<h2 class="typing" id="heading">Tutorial</h2><p style="margin-top: 20px" >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><ul style="margin-top: 30px"><li id="bullet1">Lorem ipsum dolor</li><li id="bullet2">consectetur adipisicing elit</li><li id="bullet3">sed do eiusmod</li></ul><table id="sideBoxTable"><tr id="tabelHeading"><td>Anforderungen</td><td id="secondCell"></td></tr><tr><td class="caption">Shopsystem</td><td id="Shopsystem"></td></tr><tr><td class="caption">Pim System</td><td id="PimSystem"></td></tr><tr><td class="caption">WaWi</td><td id="WaWi"></td></tr></table><div id="buttonWebseite" >Zur Webseite</div>'
+var tutorial = '<h2 class="typing" id="heading">Tutorial</h2><p style="margin-top: 20px" >In dieser Visualisierung kann man die Anbindungen von Diensleistern, Shopsystemen und Warenwirtschaften betrachten.</p><ul style="margin-top: 30px"><li id="bullet1">Einfach auf einen  Kreis klicken.</li><li id="bullet2">In den Einstellungen kannst du dir die zukünftige Anbindung anngucken.</li><li id="bullet3">Auch die Warenwirtschaften kannst du über die Einstellungen aktivieren.</li></ul>'
 
 
 

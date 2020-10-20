@@ -8,7 +8,7 @@ var dl = {
         bullet1: 'Lorem ipsum dolor',
         bullet2: 'Lorem ipsum dolor',
         Shopsystem: '',
-        PimSystem: '',
+        PimSystem: 'X',
         WaWiSystem: '',
         angebunden: true,
         shopSysteme: [
