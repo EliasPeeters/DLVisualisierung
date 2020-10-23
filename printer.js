@@ -234,24 +234,34 @@ window.onload = function () {
 */
 };
 
+function elementInnerHTML(element, input) {
+    if (input !== undefined) {
+        document.getElementById(element).innerHTML = input
+    } else {
+        document.getElementById(element).innerHTML = '';
+    }
+}
+
 function fillsideBox(input, type) {
     if (type === 'SHOP') {
+        elementInnerHTML('verysmall', input.verysmall);
+        elementInnerHTML('small', input.small);
+        elementInnerHTML('medium', input.medium);
+        elementInnerHTML('big', input.big);
+        elementInnerHTML('verybig', input.verybig);
 
-        document.getElementById('verysmall').innerHTML = input.verysmall;
-        document.getElementById('small').innerHTML = input.small;
-        document.getElementById('medium').innerHTML = input.medium;
-        document.getElementById('big').innerHTML = input.big;
-        document.getElementById('verybig').innerHTML = input.verybig;
     } else if (type === 'DL') {
-        document.getElementById('Shopsystem').innerHTML = input.Shopsystem;
-        document.getElementById('PimSystem').innerHTML = input.PimSystem;
-        document.getElementById('WaWi').innerHTML = input.WaWiSystem;
+        elementInnerHTML('Shopsystem', input.Shopsystem);
+        elementInnerHTML('PimSystem', input.PimSystem);
+        elementInnerHTML('WaWi', input.WaWiSystem);
     }
-    document.getElementById('heading').innerHTML = input.title;
 
-    document.getElementById('bullet1').innerHTML = input.bullet1;
-    document.getElementById('bullet2').innerHTML = input.bullet2;
-    document.getElementById('bullet3').innerHTML = input.bullet3;
+
+    elementInnerHTML('heading', input.title);
+    elementInnerHTML('bullet1', input.bullet1);
+    elementInnerHTML('bullet2', input.bullet2);
+    elementInnerHTML('bullet3', input.bullet3);
+
     document.getElementById('buttonWebseite').onmousedown = function() {
         window.open(input.url)
     }
