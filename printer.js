@@ -330,6 +330,10 @@ function press(input, type) {
 
         var allDLArray  = Object.keys(dl);
         for (var i = 0; i < allDLArray.length; i++) {
+            if (!futureVisible && !dl[allDLArray[i]].angebunden) {
+                //console.log(allDLArray[i]);
+                break;
+            }
             for (var ii = 0; ii < dl[allDLArray[i]].shopSysteme.length; ii++) {
                 if (dl[allDLArray[i]].shopSysteme[ii] === input) {
                     ctx.beginPath();
