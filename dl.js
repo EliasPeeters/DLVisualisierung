@@ -1,12 +1,10 @@
-var dlcontent = '<h2 class="typing" id="heading">Dienstleister</h2><p style="margin-top: 20px" >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><ul style="margin-top: 30px"><li id="bullet1">Lorem ipsum dolor</li><li id="bullet2">consectetur adipisicing elit</li><li id="bullet3">sed do eiusmod</li></ul><table id="sideBoxTable"><tr id="tabelHeading"><td>Anforderungen</td><td id="secondCell"></td></tr><tr><td class="caption">Shopsystem</td><td id="Shopsystem"></td></tr><tr><td class="caption">Pim System</td><td id="PimSystem"></td></tr><tr><td class="caption">WaWi</td><td id="WaWi"></td></tr></table><div id="buttonWebseite" >Zur Webseite</div>'
+var dlcontent = '<h2 class="typing" id="heading">Dienstleister</h2><p id="text" style="margin-top: 20px; text-align: justify" >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><ul style="margin-top: 30px"><li id="bullet1">Lorem ipsum dolor</li><li id="bullet2">consectetur adipisicing elit</li><li id="bullet3">sed do eiusmod</li></ul><table id="sideBoxTable"><tr id="tabelHeading"><td>Anforderungen</td><td id="secondCell"></td></tr><tr><td class="caption">Shopsystem</td><td id="Shopsystem"></td></tr><tr><td class="caption">Pim System</td><td id="PimSystem"></td></tr><tr><td class="caption">WaWi</td><td id="WaWi"></td></tr></table><div id="buttonWebseite" >Zur Webseite</div>'
 
 
 var dl = {
     Brickfox: {
         title: 'Brickfox',
         text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        bullet1: 'Lorem ipsum dolor',
-        bullet2: 'Lorem ipsum dolor',
         Shopsystem: '',
         PimSystem: 'X',
         WaWiSystem: '',
@@ -38,8 +36,8 @@ var dl = {
 
     Tradebyte: {
         title: 'Tradebyte',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        bullet1: 'Lorem ipsum dolor',
+        text: 'Das Tradebyte Ökosystem gibt Antworten auf die Herausforderungen der digitalen Transformation im Handel und sorgt für eine nahtlose Vernetzung von Herstellern, Händlern und Retailern im digitalen Supply Chain.',
+        bullet1: '',
         bullet2: 'Lorem ipsum dolor',
         bullet3: 'Lorem ipsum dolor',
         Shopsystem: '',

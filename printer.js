@@ -235,10 +235,11 @@ window.onload = function () {
 };
 
 function elementInnerHTML(element, input) {
-    if (input !== undefined) {
+
+    if (input !== undefined || input !== "") {
         document.getElementById(element).innerHTML = input
     } else {
-        document.getElementById(element).innerHTML = '';
+        document.getElementById(element).outerHTML = '';
     }
 }
 
@@ -256,6 +257,7 @@ function fillsideBox(input, type) {
         elementInnerHTML('WaWi', input.WaWiSystem);
     }
 
+    elementInnerHTML('text', input.text);
 
     elementInnerHTML('heading', input.title);
     elementInnerHTML('bullet1', input.bullet1);
