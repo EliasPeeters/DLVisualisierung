@@ -175,13 +175,12 @@ var dl = {
         ]
     },
     _004: {
-        title: 'JTL',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        bullet1: 'Lorem ipsum dolor',
-        bullet2: 'Lorem ipsum dolor',
-        bullet3: 'Lorem ipsum dolor',
-        Shopsystem: 'X',
-        PimSystem: 'X',
+        title: '004',
+        text: 'Der B2C Vertrieb auf Marktplätzen ist für viele Markenhersteller eine neue Herausforderung, da er eine kleinteilige Bestellabwicklung voraussetzt. Als E-Commerce Experten übernehmen wir diese Aufgabe für Sie.',
+        bullet1: 'Mit unserem Service „004 Marktplatz Fulfillment“ bieten wir Herstellern einen schnellen und kostengünstigen Zugang zu Marktplätzen',
+        bullet2: 'Da wir dabei das komplette Fulfillment übernehmen, können Sie als Hersteller auf den Aufbau einer eigenen B2C Infrastruktur verzichten.',
+        Shopsystem: '',
+        PimSystem: '',
         WaWiSystem: '',
         big: 'X',
         verybig: '',
@@ -190,7 +189,8 @@ var dl = {
         ],
         WaWi: [
 
-        ]
+        ],
+        url: 'https://www.004gmbh.de/marktplatz-fulfillment/'
     },
     Magnalister: {
         title: 'Magnalister',
